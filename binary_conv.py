@@ -168,7 +168,7 @@ class anti_sign(nn.Module):
         adjusted_result = adjusted_result.detach() - final_result.detach() + final_result
         
         return adjusted_result
-
+'''
 class dupbinary_conv(nn.Module):
     default_act = binary_activation()
     def __init__(self, in_channels, out_channels, kernel_size=1, stride=1, padding=None, groups=1, dilation=1, act=True):
@@ -370,3 +370,4 @@ class LsqConv2d(nn.Conv2d):
         quantized_weight = self.quan_w_fn(self.weight)
         quantized_act = self.quan_a_fn(x)
         return torch.nn.functional.conv2d(quantized_act, quantized_weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+'''
