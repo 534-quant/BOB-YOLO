@@ -138,7 +138,7 @@ class binary_conv(nn.Module):
         out = self.bias2(out)
 
         return out
-
+'''
 class anti_sign(nn.Module):
     def __init__(self):
         super(anti_sign, self).__init__()
@@ -168,7 +168,7 @@ class anti_sign(nn.Module):
         adjusted_result = adjusted_result.detach() - final_result.detach() + final_result
         
         return adjusted_result
-'''
+
 class dupbinary_conv(nn.Module):
     default_act = binary_activation()
     def __init__(self, in_channels, out_channels, kernel_size=1, stride=1, padding=None, groups=1, dilation=1, act=True):
